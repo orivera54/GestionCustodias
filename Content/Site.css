@@ -484,6 +484,11 @@ textarea {
         margin-right: 4px;
     }
 
+.editor-label {
+    background-color: #0286c4;
+    color: white;
+}
+
 /* info and errors */
 .message-info {
     border: 1px solid;

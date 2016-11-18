@@ -38,30 +38,52 @@ Editar Elemento
 
         <%: Html.HiddenFor(Function(model) model.Codigo) %>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(Function(model) model.abreviatura) %>
-        </div>
-         <div class="editor-field">
-            <%: Html.EditorFor(Function(model) model.abreviatura) %>
-            <%: Html.ValidationMessageFor(Function(model) model.abreviatura) %>
-        </div>
+        <table>
+           <tr>
+               <td>
+                    <div class="editor-label">
+                         <%: Html.LabelFor(Function(model) model.abreviatura) %>
+                    </div>
+               </td>
+               <td>
+                    <div class="editor-label">
+                        <%: Html.LabelFor(Function(model) model.nombre) %>
+                    </div>
+               </td>
+           </tr>
+           <tr>
+               <td>
+                    <div class="editor-field">
+                        <%: Html.EditorFor(Function(model) model.abreviatura) %>
+                        <%: Html.ValidationMessageFor(Function(model) model.abreviatura) %>
+                    </div>
+               </td>
+               <td>
+                    <div class="editor-field">
+                         <%: Html.EditorFor(Function(model) model.nombre) %>
+                        <%: Html.ValidationMessageFor(Function(model) model.nombre) %>
+                    </div>
+               </td>
+           </tr>
+           <tr>
+               <td colspan="2">
+                    <div class="editor-label">
+                        <%: Html.LabelFor(Function(model) model.descripcion) %>
+                    </div>
+               </td>
+           </tr>
+            <tr>
+                <td colspan="2">
+                         <div class="editor-field">
+                                <%: Html.EditorFor(Function(model) model.descripcion)%>
+                                <%: Html.ValidationMessageFor(Function(model) model.descripcion) %>
+                        </div>
+                </td>
+            </tr>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(Function(model) model.nombre) %>
-        </div>
-         <div class="editor-field">
-            <%: Html.EditorFor(Function(model) model.nombre) %>
-            <%: Html.ValidationMessageFor(Function(model) model.nombre) %>
-        </div>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(Function(model) model.descripcion) %>
-        </div>
-         <div class="editor-field">
-            <%: Html.EditorFor(Function(model) model.descripcion)%>
-            <%: Html.ValidationMessageFor(Function(model) model.descripcion) %>
-        </div>
-
+        </table>
+       
         <div class="Hidden-field"> 
             <%: Html.HiddenFor(Function(model) model.USUA_Crea)%>
         </div>
@@ -77,7 +99,7 @@ Editar Elemento
 <% End Using %>
 
 <div>
-    <%: Html.ActionLink("Regresar", "Index") %>
+   <p title="Regresar"> <a href="<%: Url.Action("Index", "Elemento")%>" ><img src="../../Images/ic_reply_black_24dp_2x.png" /> </a></p>
 </div>
 
 </asp:Content>

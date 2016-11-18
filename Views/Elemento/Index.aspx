@@ -25,8 +25,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
-
+    
 
 <p>
      <a href="<%: Url.Action("Create", "Elemento")%>"><img src="../../Images/ic_add_box_black_24dp_2x.png" /> </a> 

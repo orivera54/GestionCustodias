@@ -497,6 +497,7 @@
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="Images\ic_add_box_black_24dp_2x.png" />
+    <Content Include="Images\ic_reply_black_24dp_2x.png" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
