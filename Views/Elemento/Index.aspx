@@ -131,7 +131,8 @@
             <%: Html.Raw(fechaAct)%>
         </td>
         <td style="width: 10%">
-            <%: Html.ActionLink("Editar", "Edit", New With {.id = currentItem.Codigo}, New With {.class = "btn_tab"})%> <%-- 
+              <a href="<%: Url.Action("Edit", "Elemento", New With {.id = currentItem.Codigo})%>"><img src="../../Images/ic_edit_black_24dp_1x.png" /> </a> 
+          <%--   <%: Html.ActionLink(".", "Edit", New With {.id = currentItem.Codigo}, New With {.class = "btn_edit"})%> --%> <%-- 
             <%: Html.ActionLink("Details", "Details", New With {.id = currentItem.PrimaryKey}) %> |
             <%: Html.ActionLink("Delete", "Delete", New With {.id = currentItem.PrimaryKey}) %>--%>
         </td>

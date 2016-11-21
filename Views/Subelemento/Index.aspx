@@ -27,7 +27,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
  <p>
-    <%: Html.ActionLink("Crear Nuevo Subelemento", "Create") %>
+   <a href="<%: Url.Action("Create", "SubElemento")%>"><img src="../../Images/ic_add_box_black_24dp_2x.png" /> </a> 
 </p>
 <table  class="display" id="IDXLista"  cellspacing="0" width="100%">
     <thead>
@@ -161,6 +161,7 @@
            <%: Html.Raw(fechaAct)%>
         </td>
         <td>
+            <a href="<%: Url.Action("Edit", "SubElemento", New With {.id = currentItem.Codigo})%>"><img src="../../Images/ic_edit_black_24dp_1x.png" /> </a> 
             <%--<%: Html.ActionLink("Edit", "Edit", New With {.id = currentItem.PrimaryKey}) %> |
             <%: Html.ActionLink("Details", "Details", New With {.id = currentItem.PrimaryKey}) %> |
             <%: Html.ActionLink("Delete", "Delete", New With {.id = currentItem.PrimaryKey}) %>--%>

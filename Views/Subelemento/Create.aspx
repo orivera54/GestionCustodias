@@ -17,47 +17,84 @@
 
     <fieldset>
         <legend>SubElementosModel</legend>
+        
+    <table>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(Function(model) model.abreviatura) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(Function(model) model.abreviatura) %>
-            <%: Html.ValidationMessageFor(Function(model) model.abreviatura) %>
-        </div>
+     <tr>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(Function(model) model.nombre) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(Function(model) model.nombre) %>
-            <%: Html.ValidationMessageFor(Function(model) model.nombre) %>
-        </div>
+        <td>
+                <div class="editor-label">
+                    <%: Html.LabelFor(Function(model) model.abreviatura) %>
+                </div>
+        </td>
+        <td>
+                <div class="editor-label">
+                    <%: Html.LabelFor(Function(model) model.nombre) %>
+                </div>
+        </td>
+     </tr>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(Function(model) model.descripcion) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(Function(model) model.descripcion) %>
-            <%: Html.ValidationMessageFor(Function(model) model.descripcion) %>
-        </div>
+     <tr>
+         <td>
+                <div class="editor-field">
+                    <%: Html.EditorFor(Function(model) model.abreviatura) %>
+                    <%: Html.ValidationMessageFor(Function(model) model.abreviatura) %>
+                </div>
+         </td>
+         <td>
+                 <div class="editor-field">
+                    <%: Html.EditorFor(Function(model) model.nombre) %>
+                    <%: Html.ValidationMessageFor(Function(model) model.nombre) %>
+                </div>
+         </td>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(Function(model) model.TieneClave) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.DropDownList("TieneClave")%>
-            <%: Html.ValidationMessageFor(Function(model) model.TieneClave)%>
-           
-        </div>
+     </tr>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(Function(model) model.TieneLlave) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.DropDownList("TieneLlave")%>
-            <%: Html.ValidationMessageFor(Function(model) model.TieneLlave) %>
-        </div>
+     <tr>
+         <td colspan="2">
+                    <div class="editor-label">
+                        <%: Html.LabelFor(Function(model) model.descripcion) %>
+                    </div>
+         </td>
+     </tr>
+     <tr>
+         <td colspan="2">
+                    <div class="editor-field">
+                        <%: Html.EditorFor(Function(model) model.descripcion) %>
+                        <%: Html.ValidationMessageFor(Function(model) model.descripcion) %>
+                     </div>
+         </td>
+     </tr>
+
+     <tr>
+         <td>
+                        <div class="editor-label">
+                            <%: Html.LabelFor(Function(model) model.TieneClave) %>
+                        </div>
+         </td>
+         <td>
+                        <div class="editor-label">
+                            <%: Html.LabelFor(Function(model) model.TieneLlave) %>
+                        </div>
+         </td>
+     </tr>
+     <tr>
+         <td>
+                        <div class="editor-field">
+                            <%: Html.DropDownList("TieneClave")%>
+                            <%: Html.ValidationMessageFor(Function(model) model.TieneClave)%>
+                        </div>
+         </td>
+         <td>
+                        <div class="editor-field">
+                            <%: Html.DropDownList("TieneLlave")%>
+                            <%: Html.ValidationMessageFor(Function(model) model.TieneLlave) %>
+                        </div>
+         </td>
+     </tr>  
+     
+
+         </table>
 
         <p>
             <input type="submit" value="Grabar" />
@@ -66,7 +103,7 @@
 <% End Using %>
 
 <div>
-    <%: Html.ActionLink("Regresar", "Index")%>
+     <p title="Regresar"> <a href="<%: Url.Action("Index", "SubElemento")%>" ><img src="../../Images/ic_reply_black_24dp_2x.png" /> </a></p>
 </div>
 
 </asp:Content>

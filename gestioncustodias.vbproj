@@ -497,6 +497,7 @@
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="Images\ic_add_box_black_24dp_2x.png" />
+    <Content Include="Images\ic_edit_black_24dp_1x.png" />
     <Content Include="Images\ic_reply_black_24dp_2x.png" />
     <Content Include="packages.config" />
   </ItemGroup>
@@ -613,6 +614,7 @@
     <Content Include="Views\Elemento\Edit.aspx" />
     <Content Include="Views\Elemento\Index.aspx" />
     <Content Include="Views\Subelemento\Create.aspx" />
+    <Content Include="Views\Subelemento\Edit.aspx" />
     <Content Include="Views\Subelemento\Index.aspx" />
     <Content Include="Views\Usuarios\Ingresar.aspx" />
     <Content Include="Web.config" />

@@ -126,6 +126,10 @@ Public Class SubElementoController
         TieneClave.Add(New SelectListItem With {.Text = "Si", .Value = 1})
         TieneClave.Add(New SelectListItem With {.Text = "No", .Value = 0, .Selected = True})
 
+        ViewBag.TieneLlave = TieneLlave
+        ViewBag.TieneClave = TieneClave
+
+
         Dim Subelementos As Custodia.Models.SubElementosModel = ctxSubElemento.SubElementoSeguridad.Find(id)
         If Subelementos Is Nothing Then
             Return HttpNotFound()
@@ -138,9 +142,7 @@ Public Class SubElementoController
             ViewData("menu") = menuapp
         End If
 
-        ViewBag.TieneLlave = TieneLlave
-        ViewBag.TieneClave = TieneClave
-
+       
 
         Return View(Subelementos)
     End Function

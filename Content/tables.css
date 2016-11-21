@@ -22,6 +22,15 @@
     color: #34495e;
 }
 
+.btn_edit:link, .btn_edit:visited, .btn_edit:active {
+      color: #006d3a;
+      background-image:url("../Images/ic_edit_black_24dp_1x.png");
+}
+
+.btn_edit:hover {
+    color: #34495e;
+}
+
 .rwd-table td:first-child {
   padding-top: .5em;
 }
