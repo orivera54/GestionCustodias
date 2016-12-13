@@ -98,9 +98,9 @@ C:\Users\orivera\Documents\Visual Studio 2013\Projects\gestioncustodias\gestionc
 C:\Users\orivera\Documents\Visual Studio 2013\Projects\gestioncustodias\gestioncustodias\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\orivera\Documents\Visual Studio 2013\Projects\gestioncustodias\gestioncustodias\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\orivera\Documents\Visual Studio 2013\Projects\gestioncustodias\gestioncustodias\obj\Debug\gestioncustodias.vbproj.App.config
-C:\Users\orivera\Documents\Visual Studio 2013\Projects\gestioncustodias\gestioncustodias\obj\Debug\gestioncustodias.vbprojResolveAssemblyReference.cache
 C:\Users\orivera\Documents\Visual Studio 2013\Projects\gestioncustodias\gestioncustodias\obj\Debug\gestioncustodias.Resources.resources
 C:\Users\orivera\Documents\Visual Studio 2013\Projects\gestioncustodias\gestioncustodias\obj\Debug\gestioncustodias.vbproj.GenerateResource.Cache
 C:\Users\orivera\Documents\Visual Studio 2013\Projects\gestioncustodias\gestioncustodias\obj\Debug\gestioncustodias.dll
 C:\Users\orivera\Documents\Visual Studio 2013\Projects\gestioncustodias\gestioncustodias\obj\Debug\gestioncustodias.xml
 C:\Users\orivera\Documents\Visual Studio 2013\Projects\gestioncustodias\gestioncustodias\obj\Debug\gestioncustodias.pdb
+C:\Users\orivera\Documents\Visual Studio 2013\Projects\gestioncustodias\gestioncustodias\obj\Debug\gestioncustodias.vbprojResolveAssemblyReference.cache

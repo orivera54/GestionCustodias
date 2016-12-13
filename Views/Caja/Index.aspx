@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage(Of IEnumerable (Of gestioncustodias.Custodia.Models.elementosseguridadModel))" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage(Of IEnumerable (Of gestioncustodias.Custodia.Models.CajaModel))" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Index
@@ -16,7 +16,7 @@
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
-                <h2>Elementos de Seguridad</h2>
+                <h2>Cajas</h2>
             </hgroup>
  
         </div>
@@ -28,16 +28,19 @@
     
 
 <p>
-     <a href="<%: Url.Action("Create", "Elemento")%>"><img src="../../Images/ic_add_box_black_24dp_2x.png" /> </a> 
+     <a href="<%: Url.Action("Create", "Caja")%>"><img src="../../Images/ic_add_box_black_24dp_2x.png" /> </a> 
 </p>
 <table class="display" id="IDXLista"  cellspacing="0" width="100%">
     <thead>
       <tr>
         <th>
-            <%: Html.DisplayNameFor(Function(model) model.abreviatura) %>
+            <%: Html.DisplayNameFor(Function(model) model.codcaja)%>
         </th>
         <th>
-            <%: Html.DisplayNameFor(Function(model) model.nombre) %>
+            <%: Html.DisplayNameFor(Function(model) model.cod_ciu)%>
+        </th>
+          <th>
+            <%: Html.DisplayNameFor(Function(model) model.direccion)%>
         </th>
         <th>
             <%: Html.DisplayNameFor(Function(model) model.descripcion) %>
@@ -60,10 +63,13 @@
     <tfoot>
       <tr>
         <th>
-            <%: Html.DisplayNameFor(Function(model) model.abreviatura) %>
+            <%: Html.DisplayNameFor(Function(model) model.codcaja)%>
         </th>
         <th>
-            <%: Html.DisplayNameFor(Function(model) model.nombre) %>
+            <%: Html.DisplayNameFor(Function(model) model.cod_ciu)%>
+        </th>
+           <th>
+            <%: Html.DisplayNameFor(Function(model) model.direccion)%>
         </th>
         <th>
             <%: Html.DisplayNameFor(Function(model) model.descripcion) %>
@@ -94,6 +100,9 @@
                
         Dim fechaCrea As String = ""
         Dim fechaAct As String = ""
+        Dim Ciudades As New gestioncustodias.Seguridad.SeguridadContext
+        Dim Ciudad As gestioncustodias.Seguridad.CiudadModel
+        Ciudad = Ciudades.Ciudades.Find(currentItem.cod_ciu)
         
         
         If IsNothing(currentItem.FechaCrea) Then
@@ -110,11 +119,14 @@
         
         %>
     <tr>
-        <td data-th="<%: Html.DisplayNameFor(Function(model) model.abreviatura) %>" style="width: 5%" >
-            <%: Html.DisplayFor(Function(modelItem) currentItem.abreviatura) %>
+        <td data-th="<%: Html.DisplayNameFor(Function(model) model.codcaja)%>" style="width: 5%" >
+            <%: Html.DisplayFor(Function(modelItem) currentItem.codcaja)%>
         </td>
-        <td data-th="<%: Html.DisplayNameFor(Function(model) model.nombre) %>" style="width: 25%">
-            <%: Html.DisplayFor(Function(modelItem) currentItem.nombre) %>
+        <td data-th="Ciudad" style="width: 25%">
+            <%: Html.DisplayFor(Function(modelItem) Ciudad.tx_descrip)%>
+        </td>
+        <td data-th="<%: Html.DisplayNameFor(Function(model) model.direccion)%>" style="width: 25%">
+            <%: Html.DisplayFor(Function(modelItem) currentItem.direccion)%>
         </td>
         <td data-th="<%: Html.DisplayNameFor(Function(model) model.descripcion) %>" style="width: 20%">
             <%: Html.DisplayFor(Function(modelItem) currentItem.descripcion) %>
@@ -132,7 +144,7 @@
             <%: Html.Raw(fechaAct)%>
         </td>
         <td style="width: 10%">
-              <a href="<%: Url.Action("Edit", "Elemento", New With {.id = currentItem.Codigo})%>"><img src="../../Images/ic_edit_black_24dp_1x.png" /> </a> 
+              <a href="<%: Url.Action("Edit", "Caja", New With {.id = currentItem.Codigo})%>"><img src="../../Images/ic_edit_black_24dp_1x.png" /> </a> 
           <%--   <%: Html.ActionLink(".", "Edit", New With {.id = currentItem.Codigo}, New With {.class = "btn_edit"})%> --%> <%-- 
             <%: Html.ActionLink("Details", "Details", New With {.id = currentItem.PrimaryKey}) %> |
             <%: Html.ActionLink("Delete", "Delete", New With {.id = currentItem.PrimaryKey}) %>--%>

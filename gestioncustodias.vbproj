@@ -247,6 +247,7 @@
     <Compile Include="App_Start\WebApiConfig.vb" />
     <Compile Include="Class\libapp.vb" />
     <Compile Include="Class\mdlGlobal.vb" />
+    <Compile Include="Controllers\CajaController.vb" />
     <Compile Include="Controllers\ElementoController.vb" />
     <Compile Include="Controllers\MenuController.vb" />
     <Compile Include="Controllers\SubElementoController.vb" />
@@ -255,6 +256,7 @@
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CajaModels.vb" />
     <Compile Include="Models\ESeguridadModels.vb" />
     <Compile Include="Models\SeguridadModels.vb" />
     <Compile Include="Models\SubElementoModels.vb" />
@@ -277,6 +279,7 @@
     <Compile Include="Controllers\AccountController.vb" />
     <Compile Include="Controllers\HomeController.vb" />
     <Compile Include="Models\AccountModels.vb" />
+    <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -287,6 +290,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\DataTables\extensions\AutoFill\css\autoFill.bootstrap.css" />
     <Content Include="Content\DataTables\extensions\AutoFill\css\autoFill.bootstrap.min.css" />
     <Content Include="Content\DataTables\extensions\AutoFill\css\autoFill.bootstrap4.css" />
@@ -439,6 +444,10 @@
     <Content Include="Content\DataTables\extensions\RowReorder\css\semanticui.scss" />
     <Content Include="Content\DataTables\extensions\Buttons\css\mixins.scss" />
     <Content Include="Content\DataTables\extensions\Buttons\css\common.scss" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -500,6 +509,13 @@
     <Content Include="Images\ic_edit_black_24dp_1x.png" />
     <Content Include="Images\ic_reply_black_24dp_2x.png" />
     <Content Include="packages.config" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Views\Caja\Create.aspx" />
+    <Content Include="Views\Caja\Edit.aspx" />
+    <Content Include="Views\Caja\Index.aspx" />
+    <Content Include="Views\_ViewStart.vbhtml" />
+    <Content Include="Views\Shared\_Layout.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -617,7 +633,9 @@
     <Content Include="Views\Subelemento\Edit.aspx" />
     <Content Include="Views\Subelemento\Index.aspx" />
     <Content Include="Views\Usuarios\Ingresar.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

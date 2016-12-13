@@ -13,6 +13,7 @@ Namespace Seguridad
         End Sub
 
         Public Property Oficinas As DbSet(Of OficinaModel)
+        Public Property Ciudades As DbSet(Of CiudadModel)
 
     End Class
 
@@ -26,6 +27,21 @@ Namespace Seguridad
         <Display(Name:="Nombre")> _
         Public Property tx_descrip As String
 
+
+    End Class
+
+    <Table("tbl_ciudades")> _
+    Public Class CiudadModel
+
+        <Key()> _
+       <DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)> _
+        Public Property cod_ciu As Integer
+
+        <Display(Name:="Ciudad")> _
+        Public Property tx_descrip As String
+
+        <Display(Name:="Pais")>
+        Public Property cod_pai As Integer
 
     End Class
 End Namespace

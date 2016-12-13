@@ -138,6 +138,8 @@ Namespace Custodia.Models
                             link_menu = "/Elemento"
                         Case 2
                             link_menu = "/SubElemento"
+                        Case 3
+                            link_menu = "/Caja"
                     End Select
                     mnumantenimiento &= "<li><a href=""" & link_menu & """>" & drsel.Item("NombreMenu") & "</a></li>" & vbCrLf
                 ElseIf lstreg.Contains(drsel.Item("codigomenu")) Then

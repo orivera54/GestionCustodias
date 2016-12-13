@@ -76,6 +76,9 @@ Public Class ElementoController
                     Return RedirectToLocal(returnUrl)
 
                 End Using
+            Else
+                Dim errors = ModelState.Values.SelectMany(Function(v) v.Errors)
+                MsgBox(errors(0).ErrorMessage)
             End If
             ViewData("fechaCrea") = Now
             ViewData("USUCrea") = User.Identity.Name
@@ -121,6 +124,9 @@ Public Class ElementoController
                 ctxElemento.Entry(model).State = EntityState.Modified
                 ctxElemento.SaveChanges()
                 Return RedirectToAction("Index")
+            Else
+                Dim errors = ModelState.Values.SelectMany(Function(v) v.Errors)
+                MsgBox(errors(0).ErrorMessage)
             End If
 
             ViewData("fechaAct") = Now

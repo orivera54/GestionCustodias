@@ -32,5 +32,12 @@ Public Class RouteConfig
             url:="{controller}/{action}/{id}", _
             defaults:=New With {.controller = "SubElemento", .action = "Index", .id = UrlParameter.Optional} _
         )
+
+        routes.MapRoute( _
+           name:="Caja", _
+           url:="{controller}/{action}/{id}", _
+           defaults:=New With {.controller = "Caja", .action = "Index", .id = UrlParameter.Optional} _
+       )
+
     End Sub
 End Class
