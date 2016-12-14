@@ -132,7 +132,7 @@ Namespace Custodia.Models
                 Dim lstcons = New List(Of Integer) From {15, 16, 17, 18, 19, 20} 'Opciones que pertenecen al menu de consultas 
                 Dim link_menu As String = ""
 
-                If lstmant.Contains(drsel.Item("codigomenu")) Then   'Si el codigo esta en el listado de opciones de mantimiento 
+                If lstmant.Contains(drsel.Item("codigomenu")) Then   'Si el codigo esta en el listado de opciones de mantenimiento 
                     Select Case drsel.Item("codigomenu")
                         Case 1
                             link_menu = "/Elemento"
@@ -140,6 +140,8 @@ Namespace Custodia.Models
                             link_menu = "/SubElemento"
                         Case 3
                             link_menu = "/Caja"
+                        Case 4
+                            link_menu = "/Llavero"
                     End Select
                     mnumantenimiento &= "<li><a href=""" & link_menu & """>" & drsel.Item("NombreMenu") & "</a></li>" & vbCrLf
                 ElseIf lstreg.Contains(drsel.Item("codigomenu")) Then

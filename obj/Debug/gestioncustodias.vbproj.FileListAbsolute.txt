@@ -103,4 +103,3 @@ C:\Users\orivera\Documents\Visual Studio 2013\Projects\gestioncustodias\gestionc
 C:\Users\orivera\Documents\Visual Studio 2013\Projects\gestioncustodias\gestioncustodias\obj\Debug\gestioncustodias.dll
 C:\Users\orivera\Documents\Visual Studio 2013\Projects\gestioncustodias\gestioncustodias\obj\Debug\gestioncustodias.xml
 C:\Users\orivera\Documents\Visual Studio 2013\Projects\gestioncustodias\gestioncustodias\obj\Debug\gestioncustodias.pdb
-C:\Users\orivera\Documents\Visual Studio 2013\Projects\gestioncustodias\gestioncustodias\obj\Debug\gestioncustodias.vbprojResolveAssemblyReference.cache

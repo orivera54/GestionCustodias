@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0676F845-B4E4-4F84-B712-6D2467B1B086}</ProjectGuid>
+    <ProjectGuid>{7B4CE435-1E72-4C25-BC4C-D72AC482F188}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>gestioncustodias</RootNamespace>
@@ -249,6 +249,7 @@
     <Compile Include="Class\mdlGlobal.vb" />
     <Compile Include="Controllers\CajaController.vb" />
     <Compile Include="Controllers\ElementoController.vb" />
+    <Compile Include="Controllers\LlaveroController.vb" />
     <Compile Include="Controllers\MenuController.vb" />
     <Compile Include="Controllers\SubElementoController.vb" />
     <Compile Include="Controllers\UsuariosController.vb" />
@@ -258,6 +259,7 @@
     </Compile>
     <Compile Include="Models\CajaModels.vb" />
     <Compile Include="Models\ESeguridadModels.vb" />
+    <Compile Include="Models\LlaveroModel.vb" />
     <Compile Include="Models\SeguridadModels.vb" />
     <Compile Include="Models\SubElementoModels.vb" />
     <Compile Include="Models\UsuariosModels.vb" />
@@ -514,6 +516,9 @@
     <Content Include="Views\Caja\Create.aspx" />
     <Content Include="Views\Caja\Edit.aspx" />
     <Content Include="Views\Caja\Index.aspx" />
+    <Content Include="Views\Llavero\Create.aspx" />
+    <Content Include="Views\Llavero\Edit.aspx" />
+    <Content Include="Views\Llavero\Index.aspx" />
     <Content Include="Views\_ViewStart.vbhtml" />
     <Content Include="Views\Shared\_Layout.vbhtml" />
   </ItemGroup>
