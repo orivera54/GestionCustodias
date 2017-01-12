@@ -34,6 +34,10 @@ Namespace Custodia.Models
         <Display(Name:="Oficina")> _
         Public Property cod_ofi As Integer
 
+        <Required()> _
+        <Display(Name:="Cliente")> _
+        Public Property cod_cliente As Integer
+
         <Display(Name:="Usuario Creación")> _
         Public Property USUA_Crea As String
 
@@ -47,6 +51,8 @@ Namespace Custodia.Models
         <Display(Name:="Fecha de Actualización")> _
         <DisplayFormat(ConvertEmptyStringToNull:=False, NullDisplayText:="")> _
         Public Property FechaActualiza As Nullable(Of DateTime)
+
+
 
     End Class
 End Namespace

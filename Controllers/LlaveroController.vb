@@ -47,6 +47,7 @@ Namespace Controllers
 
             ViewBag.Idcaja = New SelectList(CtxCaja.Caja.ToList, "codigo", "descripcion")
             ViewBag.cod_ofi = New SelectList(CtxSeguridad.Oficinas.ToList, "cod_ofi", "tx_descrip")
+            ViewBag.cod_cliente = New SelectList(CtxSeguridad.Clientes.ToList, "cod_cliente", "tx_descrip")
 
 
             ViewData("fechaCrea") = Now
@@ -78,6 +79,7 @@ Namespace Controllers
 
                 ViewBag.cod_ofi = New SelectList(CtxSeguridad.Oficinas.ToList, "cod_ofi", "tx_descrip", model.cod_ofi)
                 ViewBag.Idcaja = New SelectList(CtxCaja.Caja.ToList, "codigo", "descripcion", model.Idcaja)
+                ViewBag.cod_cliente = New SelectList(CtxSeguridad.Clientes.ToList, "cod_cliente", "tx_descrip", model.cod_cliente)
 
                 ViewData("fechaCrea") = Now
                 ViewData("USUCrea") = User.Identity.Name
@@ -106,6 +108,7 @@ Namespace Controllers
             ViewData("USUAct") = User.Identity.Name
             ViewBag.cod_ofi = New SelectList(CtxSeguridad.Oficinas.ToList, "cod_ofi", "tx_descrip", Llaveros.cod_ofi)
             ViewBag.Idcaja = New SelectList(CtxCaja.Caja.ToList, "codigo", "descripcion", Llaveros.Idcaja)
+            ViewBag.cod_cliente = New SelectList(CtxSeguridad.Clientes.ToList, "cod_cliente", "tx_descrip", Llaveros.cod_cliente)
 
             Return View(Llaveros)
         End Function
@@ -130,6 +133,8 @@ Namespace Controllers
 
                 ViewBag.cod_ofi = New SelectList(CtxSeguridad.Oficinas.ToList, "cod_ofi", "tx_descrip", model.cod_ofi)
                 ViewBag.Idcaja = New SelectList(CtxCaja.Caja.ToList, "codigo", "descripcion", model.Idcaja)
+                ViewBag.cod_cliente = New SelectList(CtxSeguridad.Clientes.ToList, "cod_cliente", "tx_descrip", model.cod_cliente)
+
                 Return View(model)
             Catch ex As Exception
                 MsgBox(ex.InnerException.Message)
@@ -154,6 +159,22 @@ Namespace Controllers
             End Try
         End Function
 
+      
+        Public Function TraeOficina(ByVal id As Integer) As ActionResult
+
+            ' TODO: Add TraeOficina  logic here
+            Dim cod_cliente As Integer = id
+            Dim dictOfi As IDictionary(Of String, String) = New Dictionary(Of String, String)()
+            Dim Oficinas = CtxSeguridad.Oficinas.Where(Function(m) m.cod_cliente = cod_cliente)
+
+            For Each Oficina In Oficinas
+                dictOfi.Add(Oficina.cod_ofi.ToString(), Oficina.tx_descrip)
+            Next
+
+            Return Json(dictOfi, JsonRequestBehavior.AllowGet)
+
+        End Function
+     
 #Region "Helpers"
         Private Function RedirectToLocal(ByVal returnUrl As String) As ActionResult
             If Url.IsLocalUrl(returnUrl) Then
@@ -162,6 +183,8 @@ Namespace Controllers
                 Return RedirectToAction("Index", "Llavero")
             End If
         End Function
+
+        
 #End Region
     End Class
 End Namespace

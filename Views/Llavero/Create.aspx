@@ -1,7 +1,9 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage(Of gestioncustodias.Custodia.Models.LlaveroModel)" %>
+﻿
 
+<%@ Page Title="" Language="VB" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage(Of gestioncustodias.Custodia.Models.LlaveroModel)" %>
+<%@ Import Namespace="Mvc.CascadeDropDown" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Crear Caja/Cofre
+    Crear Llavero
 </asp:Content>
 
 
@@ -30,7 +32,8 @@
 
 <%-- The following line works around an ASP.NET compiler warning --%>
 <%: "" %>
-
+    
+    
 <% Using Html.BeginForm() %>
     <%: Html.AntiForgeryToken() %>
     <%: Html.ValidationSummary(True) %>
@@ -40,12 +43,27 @@
 
     <table>
         <tr>
-            <td>
+            <td colspan ="3">
                  <div class="editor-label">
                      <%: Html.LabelFor(Function(model) model.codigo)%>
                 </div>
             </td>
-           
+        </tr>
+        <tr>
+            <td colspan ="3">
+              <div class="editor-field">
+                    <%: Html.EditorFor(Function(model) model.codigo)%>
+                    <%: Html.ValidationMessageFor(Function(model) model.Idcaja)%>
+              </div>
+           </td>
+        </tr>
+        <tr>
+             <td>
+                 <div class="editor-label">
+                    <%: Html.LabelFor(Function(model) model.cod_cliente)%>
+                </div>
+            </td>
+
             <td>
                  <div class="editor-label">
                      <%: Html.LabelFor(Function(model) model.cod_ofi)%>
@@ -58,15 +76,20 @@
            </td>
         </tr>
        <tr>
-           <td>
-              <div class="editor-field">
-                    <%: Html.EditorFor(Function(model) model.codigo)%>
-                    <%: Html.ValidationMessageFor(Function(model) model.Idcaja)%>
-              </div>
-           </td>
+           
+
+            <td>
+                  <div class="editor-field">
+                      <%: Html.DropDownList("cod_cliente", "Seleccione Cliente")%>   
+                      <%: Html.ValidationMessageFor(Function(model) model.cod_cliente)%>              
+                   </div>
+            </td>
+
              <td>
                   <div class="editor-field">
-                        <%: Html.DropDownList("cod_ofi", "Seleccione Oficina")%>
+                           
+                      <% %>                
+                      <%: Html.DropDownList("cod_ofi", "Seleccione Oficina")%>   
                         <%: Html.ValidationMessageFor(Function(model) model.cod_ofi)%>
                    </div>
             </td>
@@ -98,4 +121,5 @@
 
 <asp:Content ID="Content4" ContentPlaceHolderID="ScriptsSection" runat="server">
     <%: Scripts.Render("~/bundles/jqueryval") %>
+        <%: Scripts.Render("~/bundles/cascadingdd")%>
 </asp:Content>

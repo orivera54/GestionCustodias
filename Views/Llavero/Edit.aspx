@@ -45,12 +45,17 @@ Editar Elemento
                      <%: Html.LabelFor(Function(model) model.codigo)%>
                 </div>
             </td>
-           
+           <td>
+                 <div class="editor-label">
+                     <%: Html.LabelFor(Function(model) model.cod_cliente)%>
+                </div>
+            </td>
             <td>
                  <div class="editor-label">
                      <%: Html.LabelFor(Function(model) model.cod_ofi)%>
                 </div>
             </td>
+
            <td>
                 <div class="editor-label">
                     <%: Html.LabelFor(Function(model) model.Idcaja)%>
@@ -61,9 +66,15 @@ Editar Elemento
            <td>
               <div class="editor-field">
                     <%: Html.EditorFor(Function(model) model.codigo)%>
-                    <%: Html.ValidationMessageFor(Function(model) model.Idcaja)%>
+                    <%: Html.ValidationMessageFor(Function(model) model.codigo)%>
               </div>
            </td>
+           <td>
+                  <div class="editor-field">
+                      <%: Html.DropDownList("cod_cliente", "Seleccione Cliente")%>   
+                      <%: Html.ValidationMessageFor(Function(model) model.cod_cliente)%>              
+                   </div>
+            </td>
              <td>
                   <div class="editor-field">
                         <%: Html.DropDownList("cod_ofi", "Seleccione Oficina")%>
@@ -95,7 +106,7 @@ Editar Elemento
 <% End Using %>
 
 <div>
-   <p title="Regresar"> <a href="<%: Url.Action("Index", "Caja")%>" ><img src="../../Images/ic_reply_black_24dp_2x.png" /> </a></p>
+   <p title="Regresar"> <a href="<%: Url.Action("Index", "Llavero")%>" ><img src="../../Images/ic_reply_black_24dp_2x.png" /> </a></p>
 </div>
 
 </asp:Content>
@@ -104,4 +115,5 @@ Editar Elemento
 
 <asp:Content ID="Content4" ContentPlaceHolderID="ScriptsSection" runat="server">
     <%: Scripts.Render("~/bundles/jqueryval") %>
+    <%: Scripts.Render("~/bundles/cascadingdd")%>
 </asp:Content>

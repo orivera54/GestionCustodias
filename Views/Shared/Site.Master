@@ -10,6 +10,7 @@
         <%: Scripts.Render("~/bundles/modernizr")%>
         <%: Scripts.Render("~/bundles/jquery") %>
         <%: Scripts.Render("~/bundles/datatables")%>
+     
         <script  type="text/javascript">
             $(document).ready(function () {
                 $('#IDXLista').DataTable();
